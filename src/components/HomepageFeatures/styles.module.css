@@ -1,11 +1,18 @@
 .features {
   display: flex;
   align-items: center;
-  padding: 2rem 0;
+  padding: 1rem 0 2.5rem;
   width: 100%;
 }
 
-.featureSvg {
-  height: 200px;
-  width: 200px;
+.featureCard {
+  margin-bottom: 1rem;
+}
+
+.featureCard > div {
+  height: 100%;
+  padding: 1.25rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 0.75rem;
+  background: var(--ifm-background-surface-color);
 }

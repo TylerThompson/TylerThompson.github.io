@@ -2,46 +2,38 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# About Tyler Thompson
 
-Let's discover **Docusaurus in less than 5 minutes**.
+I am a senior software engineer and founder with 15+ years of experience
+building production systems across enterprise and startup environments.
 
-## Getting Started
+## What I Focus On
 
-Get started by **creating a new site**.
+- Delivering reliable, scalable software in complex environments
+- Leading architecture and implementation across full-stack systems
+- Turning ideas into real products with practical, user-centered execution
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+## Selected Work
 
-### What you'll need
+- **Live From Wisco**: Solo-built community platform used by tens of thousands
+  of Wisconsinites across web, iOS, and Android.
+- **Julian Storage**: Built a privacy-focused storage product with AES-256
+  encryption.
+- **SocialFlare**: Founded and operated a social networking platform for more
+  than 6 years.
+- **google-play-console-mcp**: Open-source MCP server for querying Play Store
+  reports from AI tooling.
+- **Veya**: Open-sourced IPTV media player focused on clean UX and broad format
+  support.
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+## Technical Strengths
 
-## Generate a new site
+- JavaScript / TypeScript, Node.js
+- React and modern web architecture
+- AWS and cloud-native delivery
+- Testing, quality, and DevOps practices
 
-Generate a new Docusaurus site using the **classic template**.
+## Connect
 
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+For full role history and certifications, connect with me on
+[LinkedIn](https://www.linkedin.com/in/tylerjamesthompson).
