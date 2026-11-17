@@ -7,8 +7,36 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Tyler Thompson',
-  tagline: 'Senior Software Engineer and Founder building enterprise and indie products',
-  favicon: 'img/favicon.ico',
+  tagline:
+    'Senior software engineer and founder of Thompson Software. Custom web and mobile software, built to last.',
+  favicon: 'img/favicon.png',
+
+  headTags: [
+    {
+      tagName: 'script',
+      attributes: {},
+      innerHTML: "document.documentElement.classList.add('js')",
+    },
+    {
+      tagName: 'link',
+      attributes: {rel: 'preconnect', href: 'https://fonts.googleapis.com'},
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com',
+        crossOrigin: 'anonymous',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap',
+      },
+    },
+  ],
 
   // Set the production url of your site here
   url: 'https://www.tylerthompson.me',
@@ -58,20 +86,16 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/docusaurus-social-card.png',
       navbar: {
         title: 'Tyler Thompson',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Tyler Thompson',
           src: 'img/logo.svg',
         },
         items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'About',
-          },
+          {to: '/#work', label: 'Work', position: 'left'},
+          {to: '/#services', label: 'Services', position: 'left'},
           {to: '/blog', label: 'Writing', position: 'left'},
           {
             href: 'https://github.com/tylerthompson',
@@ -83,21 +107,44 @@ const config = {
             label: 'LinkedIn',
             position: 'right',
           },
+          {
+            type: 'html',
+            position: 'right',
+            value:
+              '<a class="tt-nav-cta" href="https://thompsonsoftware.org/#contact">Start a project</a>',
+          },
         ],
       },
       footer: {
         style: 'dark',
         links: [
           {
-            title: 'Explore',
+            title: 'Site',
+            items: [
+              {label: 'Work', to: '/#work'},
+              {label: 'Services', to: '/#services'},
+              {label: 'Background', to: '/#experience'},
+              {label: 'Writing', to: '/blog'},
+            ],
+          },
+          {
+            title: 'Projects',
             items: [
               {
-                label: 'About',
-                to: '/docs/intro',
+                label: 'Thompson Software',
+                href: 'https://thompsonsoftware.org',
               },
               {
-                label: 'Writing',
-                to: '/blog',
+                label: 'LiveFromWisco',
+                href: 'https://www.livefromwisco.com',
+              },
+              {
+                label: 'Julian Suite',
+                href: 'https://thompsonsoftware.org/#projects',
+              },
+              {
+                label: 'Luna',
+                href: 'https://apps.apple.com/us/app/luna-private-cycle-tracker/id6769168539',
               },
             ],
           },
@@ -112,19 +159,14 @@ const config = {
                 label: 'GitHub',
                 href: 'https://github.com/tylerthompson',
               },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
               {
-                label: 'Full Experience on LinkedIn',
-                href: 'https://www.linkedin.com/in/tylerjamesthompson',
+                label: 'Start a project',
+                href: 'https://thompsonsoftware.org/#contact',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Thompson Development Group LLC. Built with Docusaurus.`,
+        copyright: `© ${new Date().getFullYear()} Tyler Thompson`,
       },
       prism: {
         theme: lightCodeTheme,
