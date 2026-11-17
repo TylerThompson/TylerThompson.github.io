@@ -16,6 +16,7 @@
 AGENTS.md
 DESIGN.md
 PRODUCT.md
+/product-docs/
 .env.local
 .env.development.local
 .env.test.local
