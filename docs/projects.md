@@ -4,30 +4,66 @@ sidebar_position: 2
 
 # Projects
 
-Here are a few projects that represent the way I like to build: practical,
-user-centered, and production-ready.
+Products I've designed, built, and operate — practical, user-centered
+software, live and in development.
 
-## Live From Wisco
+## Platforms
 
-Community platform built and operated solo across web, iOS, and Android.
-Grew to 28,000+ users and supported local events, media, and small businesses.
+Foundational products in the Julian Suite — six standalone services for
+private work data, each built around on-device encryption and independent of
+the others. In development.
 
-## Julian Storage
+- **Julian Notes** — encrypted note-taking built for meetings and everyday
+  thinking, with instant full-text search and Markdown editing.
+  [Learn more](https://thompsonsoftware.org/projects/julian-notes)
+- **Julian Storage** — encrypted cloud storage for files and objects.
+  [Learn more](https://thompsonsoftware.org/projects/julian-storage)
+- **Julian Meetings** — encrypted, peer-to-peer video meetings designed so
+  calls stay private.
+  [Learn more](https://thompsonsoftware.org/projects/julian-meetings)
+- **Julian Chat** — encrypted messaging for private conversations.
+- **Julian Auth** — standalone two-factor authentication service.
+  [Learn more](https://thompsonsoftware.org/projects/julian-auth)
+- **Julian Vault** — standalone password manager built on strong
+  client-side encryption.
+  [Learn more](https://thompsonsoftware.org/projects/julian-vault)
 
-Privacy-first cloud storage product with AES-256 encryption. Built for web and
-mobile with a focus on trust, security, and a smooth user experience.
+## Applications
 
-## SocialFlare (Defunct)
+- **LiveFromWisco** — a moderated live feed where Wisconsinites share local
+  moments. 28,000+ users across
+  [web](https://www.livefromwisco.com),
+  [iOS](https://apps.apple.com/us/app/live-from-wisco/id6762004757), and
+  [Android](https://play.google.com/store/apps/details?id=com.livefromwisco.app).
+- **Luna** — a private cycle and period tracker. Logging, symptoms, and
+  predictions stored on-device; no account required. Live on
+  [iOS](https://apps.apple.com/us/app/luna-private-cycle-tracker/id6769168539)
+  and
+  [Android](https://play.google.com/store/apps/details?id=me.tylerthompson.apps.luna).
 
-Founded and operated a scalable social networking platform for 6+ years,
-handling architecture, infrastructure, product evolution, and support.
+## Extensions
 
-## google-play-console-mcp
+- **IconForge** — convert images between formats and resize web assets,
+  entirely client-side. Live in the
+  [Chrome Web Store](https://chromewebstore.google.com/detail/iconforge/gjmldlopocodgjkofpbkmeopmjfgngeg),
+  with builds for Firefox, Safari, and Edge.
+- **Daycare Cost Calculator** — reads calendar attendance (.ics or Google
+  Calendar) and produces monthly daycare cost breakdowns, privacy-first.
+  Live in the
+  [Chrome Web Store](https://chromewebstore.google.com/detail/daycare-cost-calculator/hhnbegodboonhnlflpdiemobmpofiole),
+  with builds for Firefox, Safari, and Edge.
 
-Open-source MCP server that makes Android Play Console reporting easier to
-query from AI-powered tooling and workflows.
+## Open source
 
-## Veya
+- **google-play-console-mcp** — MCP server for querying Play Console
+  analytics and reporting from AI tooling.
+  [GitHub](https://github.com/tylerthompson/google-play-console-mcp)
+- **Veya** — open-source IPTV media player focused on clean UX and broad
+  format support.
+  [GitHub](https://github.com/tylerthompson)
 
-Open-source media player with built in IPTV support; built with a focus on clean UX and broad format
-support.
+## Earlier work
+
+- **SocialFlare** (defunct) — founded and operated a scalable social
+  networking platform for more than six years, covering architecture,
+  infrastructure, product evolution, and support.

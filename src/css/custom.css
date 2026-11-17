@@ -4,27 +4,193 @@
  * work well for content-centric websites.
  */
 
-/* You can override the default Infima variables here. */
+/* Design tokens — "Monochrome Proof" world:
+   a fine neutral scale from near-white paper to near-black ink,
+   one cobalt accent spent sparingly. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --tt-paper: #fafaf8;
+  --tt-paper-2: #f2f2ee;
+  --tt-ink: #181a20;
+  --tt-ink-2: #565d6b;
+  --tt-line: #e2e2dc;
+  --tt-line-strong: #cfcfca;
+  --tt-accent: #2f5fd0;
+  --tt-accent-dark: #1f46a8;
+  --tt-accent-soft: #e9effd;
+
+  --ifm-color-primary: #2f5fd0;
+  --ifm-color-primary-dark: #2a56bd;
+  --ifm-color-primary-darker: #274ead;
+  --ifm-color-primary-darkest: #1f3d85;
+  --ifm-color-primary-light: #4a74d8;
+  --ifm-color-primary-lighter: #5d84dd;
+  --ifm-color-primary-lightest: #8faaf0;
+
+  --ifm-background-color: var(--tt-paper);
+  --ifm-background-surface-color: #ffffff;
+  --ifm-font-family-base: 'Archivo', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --ifm-font-family-monospace: ui-monospace, 'SF Mono', SFMono-Regular, Menlo,
+    Consolas, monospace;
+  --ifm-link-color: var(--tt-accent);
+  --ifm-link-hover-color: var(--tt-accent-dark);
+  --ifm-color-emphasis-100: var(--tt-paper-2);
+  --ifm-color-emphasis-200: #ececea;
+  --ifm-color-emphasis-300: var(--tt-line);
+  --ifm-color-emphasis-600: var(--tt-ink-2);
+  --ifm-color-emphasis-700: var(--tt-ink);
+  --ifm-color-emphasis-800: #101218;
+  --ifm-navbar-background-color: var(--tt-paper);
+  --ifm-navbar-link-color: var(--tt-ink);
+  --ifm-navbar-link-hover-color: var(--tt-accent);
+  --ifm-footer-background-color: #14161c;
+  --ifm-footer-color: #b9bec9;
+  --ifm-footer-link-color: #d6dae2;
+  --ifm-footer-link-hover-color: #8faaf0;
+  --ifm-footer-title-color: #f2f3f6;
+  --ifm-code-font-size: 92%;
+  --docusaurus-highlighted-code-line-bg: rgba(47, 95, 208, 0.1);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --tt-paper: #111318;
+  --tt-paper-2: #181b22;
+  --tt-ink: #eceef2;
+  --tt-ink-2: #9aa1ae;
+  --tt-line: #262a33;
+  --tt-line-strong: #343945;
+  --tt-accent: #8aa5ff;
+  --tt-accent-dark: #a9bcff;
+  --tt-accent-soft: #1b2440;
+
+  --ifm-color-primary: #8aa5ff;
+  --ifm-color-primary-dark: #7d97f5;
+  --ifm-color-primary-darker: #6f8aed;
+  --ifm-color-primary-darkest: #5a76d6;
+  --ifm-color-primary-light: #9ab6ff;
+  --ifm-color-primary-lighter: #a7c2ff;
+  --ifm-color-primary-lightest: #c3d4ff;
+
+  --ifm-background-color: var(--tt-paper);
+  --ifm-background-surface-color: #171a21;
+  --ifm-link-color: var(--tt-accent);
+  --ifm-link-hover-color: var(--tt-accent-dark);
+  --ifm-color-emphasis-100: #1d2129;
+  --ifm-color-emphasis-200: #232834;
+  --ifm-color-emphasis-300: var(--tt-line);
+  --ifm-color-emphasis-600: var(--tt-ink-2);
+  --ifm-color-emphasis-700: var(--tt-ink);
+  --ifm-color-emphasis-800: #f2f3f6;
+  --ifm-navbar-background-color: var(--tt-paper);
+  --ifm-navbar-link-color: var(--tt-ink);
+  --ifm-navbar-link-hover-color: var(--tt-accent);
+  --ifm-footer-background-color: #0b0d11;
+  --docusaurus-highlighted-code-line-bg: rgba(138, 165, 255, 0.14);
+}
+
+html {
+  scrollbar-color: var(--tt-line-strong) transparent;
+  overflow-x: hidden;
+  overflow-x: clip;
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: var(--tt-accent);
+  color: #fff;
+}
+
+[data-theme='dark'] ::selection {
+  color: #10131a;
+}
+
+:focus-visible {
+  outline: 2px solid var(--tt-accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Navbar "Start a project" CTA (rendered via html navbar item). */
+.tt-nav-cta {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background: var(--ifm-color-primary);
+  color: #fff !important;
+  font-weight: 600;
+  font-size: 0.88rem;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.18s ease;
+}
+
+.tt-nav-cta:hover {
+  background: var(--ifm-color-primary-dark);
+  color: #fff !important;
+  text-decoration: none;
+}
+
+[data-theme='dark'] .tt-nav-cta {
+  color: #10131a !important;
+}
+
+[data-theme='dark'] .tt-nav-cta:hover {
+  color: #10131a !important;
+}
+
+/* Tight grotesk display voice, used on the homepage and docs headings. */
+h1,
+h2,
+h3 {
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+/* Reveal-on-scroll primitive (homepage). Hidden state is only applied
+   when JS is present; content stays visible without it. */
+.js .tt-reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.js .tt-reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Route-change transition: the wrapper remounts per pathname (keyed in
+   PageFade), replaying this entrance on every page swap. */
+.page-fade {
+  animation: pageFadeIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .js .tt-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .page-fade {
+    animation: none;
+  }
 }
