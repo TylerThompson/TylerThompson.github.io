@@ -10,10 +10,10 @@ easy to say that in one line on a product page. Building around it is a
 different story, because it removes a tool most software quietly depends
 on: the server being able to read your data.
 
-Once the server only ever holds ciphertext, a lot of ordinary features stop
-being ordinary. Search, recovery, support, and even debugging all have to
-be rethought. Here's how that constraint shapes the way I build the Julian
-Suite.
+Once the server only ever holds your content as ciphertext, a lot of ordinary
+features stop being ordinary. Search, recovery, support, and even debugging
+all have to be rethought. Here's how that constraint shapes the way I build
+the Julian Suite.
 
 <!-- truncate -->
 
